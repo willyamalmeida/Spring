@@ -11,6 +11,15 @@
             <file>file:/C:/Users/alunoinf/Desktop/WebSpringEmpresa2_3/web/empresa/mostrarProdutos.xhtml</file>
             <file>file:/C:/Users/alunoinf/Desktop/WebSpringEmpresa2_3/web/WEB-INF/applicationContext.xml</file>
         </group>
-        <group name="UFG_Spring"/>
+        <group name="UFG_Spring">
+            <file>file:/D:/DevUFG/Spring/WebSpringEmpresa2_3/web/empresa/mostrarCliente.xhtml</file>
+            <file>file:/D:/DevUFG/Spring/WebSpringEmpresa2_3/web/empresa/atualizarEndereco.xhtml</file>
+            <file>file:/D:/DevUFG/Spring/WebSpringEmpresa2_3/src/java/model/Endereco.java</file>
+            <file>file:/D:/DevUFG/Spring/WebSpringEmpresa2_3/web/empresa/cadastrarCliente.xhtml</file>
+            <file>file:/D:/DevUFG/Spring/WebSpringEmpresa2_3/web/empresa/atualizarCliente.xhtml</file>
+            <file>file:/D:/DevUFG/Spring/WebSpringEmpresa2_3/src/java/messages/messages_pt.properties</file>
+            <file>file:/D:/DevUFG/Spring/WebSpringEmpresa2_3/web/empresa/cadastrarEndereco.xhtml</file>
+            <file>file:/D:/DevUFG/Spring/WebSpringEmpresa2_3/src/java/view/ClienteBean.java</file>
+        </group>
     </open-files>
 </project-private>
