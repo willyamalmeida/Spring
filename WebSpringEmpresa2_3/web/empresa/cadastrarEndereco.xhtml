@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    
+    <ui:composition template="template.xhtml">
+
+        <ui:define name="body">
+            
+            <h:form id="form">
+                <div align="center">
+                    <p:panel id="panel1" style="border-radius:10px; box-shadow: rgba(0,0,0,0.4) 10px 10px; 
+                             border: 1px solid blueviolet; width: 525px">
+
+                        <h:panelGrid columns="1" rowClasses="rowRoxo" styleClass="tabelaRich500">
+                            <h:outputText value="#{msgs['endereco.dadosNovoEndereco']}" styleClass="titulosTabelas" />
+                        </h:panelGrid>
+
+                        <br/>
+
+                        <p:messages id="msgs"/>
+
+                        <h:panelGrid columns="3">
+                                                            
+                            <h:outputText value="#{msgs['endereco.rua']}: " styleClass="labels" />
+                            <p:inputText id="rua" value="#{clienteBean.endereco.rua}" >
+                                <f:validateLength minimum="3" maximum="45" for="rua"/>
+                            </p:inputText>
+                            <p:message for="rua" display="icon"/>  
+                            
+                            <h:outputText value="#{msgs['endereco.setor']}: " styleClass="labels" />
+                            <p:inputText id="setor" value="#{clienteBean.endereco.setor}">
+                                <f:validateLength minimum="3" maximum="45" for="setor"/>
+                            </p:inputText>
+                            <p:message for="setor" display="icon"/>  
+                            
+                            <h:outputText value="#{msgs['endereco.complemento']}: " styleClass="labels" />
+                            <p:inputText id="complemento" value="#{clienteBean.endereco.complemento}">
+                                <f:validateLength minimum="0" maximum="90" for="complemento"/>
+                            </p:inputText>
+                            <p:message for="complemento" display="icon"/>  
+                            
+                            <h:outputText value="#{msgs['endereco.cep']}: " styleClass="labels" />
+                            <p:inputText id="cep" value="#{clienteBean.endereco.cep}"  />
+                            <br/>
+                            
+                            <h:outputText value="#{msgs['endereco.cidade']}: " styleClass="labels" />
+                            <p:inputText id="cidade" value="#{clienteBean.endereco.cidade}" styleClass="labels">
+                                <f:validateLength minimum="3" maximum="45" for="cidade" />
+                            </p:inputText>
+                            <p:message for="cidade" display="icon"/> 
+                            
+                            <h:outputText value="#{msgs['endereco.estado']}: " styleClass="labels" />
+                            <p:inputText id="estado" value="#{clienteBean.endereco.estado}" styleClass="labels">
+                                <f:validateLength minimum="2" maximum="2" for="estado" />
+                            </p:inputText>
+                            <p:message for="estado" display="icon"/>  
+                                                                                    
+                        </h:panelGrid>
+                        
+                        <br/>
+
+                        <p:commandButton value="#{msgs['system.salvar']}" action="#{clienteBean.salvarEndereco}" 
+                                         update="panel1" ajax="false"/>
+
+                    </p:panel>
+
+                </div>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+    
+</html>
